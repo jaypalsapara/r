@@ -1,0 +1,20 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "items": [
+        {
+            "name": "icon",
+            "type": "registry:ui",
+            "title": "Icon",
+            "description": "Wrapper to render a lucide icon passed via the node prop.",
+            "dependencies": [
+                "lucide-react"
+            ],
+            "files": [
+                {
+                    "path": "icon.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        }
+    ]
+}

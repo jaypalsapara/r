@@ -1,6 +1,6 @@
 {
   "name": "registry",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,9 +8,13 @@
     "build": "tsc -b && vp build",
     "lint": "vp lint",
     "preview": "vp preview",
-    "prepare": "vp config"
+    "prepare": "vp config",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.5.2",
+    "lucide-react": "^1.78.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
@@ -23,6 +27,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "babel-plugin-react-compiler": "^1.0.0",
+    "shadcn": "^4.23.0",
     "typescript": "~7.0.2",
     "vite": "catalog:",
     "vite-plus": "catalog:"

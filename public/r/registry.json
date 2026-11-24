@@ -1,0 +1,41 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "jaypalsapara",
+  "homepage": "https://github.com/jaypalsapara/registry",
+  "items": [
+    {
+      "name": "icon",
+      "title": "Icon",
+      "description": "Wrapper to render a lucide icon passed via the node prop.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/icon.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "screen-indicator",
+      "title": "Screen Indicator",
+      "description": "Floating badge showing the current Tailwind breakpoint.",
+      "dependencies": [
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "jaypalsapara/registry/icon"
+      ],
+      "files": [
+        {
+          "path": "src/components/screen-indicator.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "type": "registry:component"
+    }
+  ]
+}

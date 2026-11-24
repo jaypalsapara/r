@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon",
+  "title": "Icon",
+  "description": "Wrapper to render a lucide icon passed via the node prop.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/icon.tsx",
+      "content": "import type { LucideIcon } from 'lucide-react';\r\nimport type { ComponentProps } from 'react';\r\n\r\ninterface IconProps extends ComponentProps<LucideIcon> {\r\n    node?: LucideIcon | null;\r\n}\r\n\r\nexport function Icon({ node: IconComponent, ...props }: IconProps) {\r\n    if (!IconComponent) {\r\n        return null;\r\n    }\r\n\r\n    return <IconComponent {...props} />;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

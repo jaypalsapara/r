@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "screen-indicator",
+  "title": "Screen Indicator",
+  "description": "Floating badge showing the current Tailwind breakpoint.",
+  "dependencies": [
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "jaypalsapara/registry/icon"
+  ],
+  "files": [
+    {
+      "path": "src/components/screen-indicator.tsx",
+      "content": "import { cva, type VariantProps } from 'class-variance-authority';\r\nimport { cn } from 'cn';\r\nimport { Laptop, Monitor, Smartphone, Tablet, TvMinimal } from 'lucide-react';\r\nimport { Icon } from '@/components/ui/icon';\r\n\r\ninterface Props {\r\n    className?: string;\r\n}\r\n\r\nconst indicatorVariants = cva(\r\n    \"m-3 gap-1 rounded-md p-1 px-1 pr-1.5 text-sm font-medium [&_svg:not([class*='size-'])]:size-4 fixed z-9999 flex items-center justify-center opacity-50 select-none hover:opacity-100 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='stroke-'])]:stroke-[2.5]\",\r\n    {\r\n        variants: {\r\n            variant: {\r\n                default: 'bg-primary text-primary-foreground',\r\n                secondary: 'bg-secondary text-secondary-foreground',\r\n                outline: 'bg-background text-foreground border',\r\n                ghost: 'text-foreground bg-transparent',\r\n            },\r\n            position: {\r\n                'top-left': 'top-0 left-0',\r\n                'top-right': 'top-0 right-0',\r\n                'bottom-left': 'bottom-0 left-0',\r\n                'bottom-right': 'right-0 bottom-0',\r\n            },\r\n        },\r\n        defaultVariants: {\r\n            variant: 'default',\r\n            position: 'bottom-left',\r\n        },\r\n    },\r\n);\r\n\r\nfunction ScreenIndicator({\r\n    variant = 'default',\r\n    position = 'bottom-left',\r\n    className,\r\n}: Props & VariantProps<typeof indicatorVariants>) {\r\n    return (\r\n        <div\r\n            className={cn(indicatorVariants({ variant, position, className }))}\r\n        >\r\n            <Icon\r\n                node={Smartphone}\r\n                className=\"max-md:block hidden opacity-50\"\r\n            />\r\n            <Icon node={Tablet} className=\"md:max-lg:block hidden opacity-50\" />\r\n            <Icon node={Laptop} className=\"lg:max-xl:block hidden opacity-50\" />\r\n            <Icon\r\n                node={Monitor}\r\n                className=\"xl:max-2xl:block hidden opacity-50\"\r\n            />\r\n            <Icon node={TvMinimal} className=\"2xl:block hidden opacity-50\" />\r\n            <div className=\"max-sm:block hidden\">vs</div>\r\n            <div className=\"sm:max-md:block hidden\">sm</div>\r\n            <div className=\"md:max-lg:block hidden\">md</div>\r\n            <div className=\"lg:max-xl:block hidden\">lg</div>\r\n            <div className=\"xl:max-2xl:block hidden\">xl</div>\r\n            <div className=\"2xl:block hidden\">2xl</div>\r\n        </div>\r\n    );\r\n}\r\n\r\nexport { ScreenIndicator, indicatorVariants };\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
