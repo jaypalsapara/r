@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "utils",
+  "title": "Utilities",
+  "description": "Share helper functions, constants, or other non-component code.",
+  "dependencies": [
+    "cn"
+  ],
+  "files": [
+    {
+      "path": "src/lib/utils.ts",
+      "content": "export { cn } from 'cn';\r\n\r\nexport const sleep = (ms: number) =>\r\n    new Promise((resolve) => setTimeout(resolve, ms));\r\n",
+      "type": "registry:lib"
+    }
+  ],
+  "type": "registry:lib"
+}

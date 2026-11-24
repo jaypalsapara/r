@@ -36,6 +36,21 @@
         }
       ],
       "type": "registry:component"
+    },
+    {
+      "name": "utils",
+      "title": "Utilities",
+      "description": "Share helper functions, constants, or other non-component code.",
+      "dependencies": [
+        "cn"
+      ],
+      "files": [
+        {
+          "path": "src/lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ],
+      "type": "registry:lib"
     }
   ]
 }

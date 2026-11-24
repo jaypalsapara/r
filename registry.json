@@ -4,6 +4,7 @@
     "homepage": "https://github.com/jaypalsapara/r",
     "include": [
         "src/components/ui/registry.json",
-        "src/components/registry.json"
+        "src/components/registry.json",
+        "src/lib/registry.json"
     ]
 }
