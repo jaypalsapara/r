@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "src/components/ui/icon.tsx",
-      "content": "import type { LucideIcon } from 'lucide-react';\r\nimport type { ComponentProps } from 'react';\r\n\r\ninterface IconProps extends ComponentProps<LucideIcon> {\r\n    node?: LucideIcon | null;\r\n}\r\n\r\nexport function Icon({ node: IconComponent, ...props }: IconProps) {\r\n    if (!IconComponent) {\r\n        return null;\r\n    }\r\n\r\n    return <IconComponent {...props} />;\r\n}\r\n",
+      "content": "import type { LucideIcon } from 'lucide-react';\nimport type { ComponentProps } from 'react';\n\ninterface IconProps extends ComponentProps<LucideIcon> {\n    node?: LucideIcon | null;\n}\n\nexport function Icon({ node: IconComponent, ...props }: IconProps) {\n    if (!IconComponent) {\n        return null;\n    }\n\n    return <IconComponent {...props} />;\n}\n",
       "type": "registry:ui"
     }
   ],

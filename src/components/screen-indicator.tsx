@@ -8,7 +8,7 @@ interface Props {
 }
 
 const indicatorVariants = cva(
-    "m-3 gap-1 rounded-md p-1 px-1 pr-1.5 text-sm font-medium [&_svg:not([class*='size-'])]:size-4 fixed z-9999 flex items-center justify-center opacity-50 select-none hover:opacity-100 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='stroke-'])]:stroke-[2.5]",
+    "fixed z-9999 m-3 flex items-center justify-center gap-1 rounded-md p-1 px-1 pr-1.5 text-sm font-medium opacity-50 select-none hover:opacity-100 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='stroke-'])]:stroke-[2.5]",
     {
         variants: {
             variant: {
@@ -42,21 +42,21 @@ function ScreenIndicator({
         >
             <Icon
                 node={Smartphone}
-                className="max-md:block hidden opacity-50"
+                className="hidden opacity-50 max-md:block"
             />
-            <Icon node={Tablet} className="md:max-lg:block hidden opacity-50" />
-            <Icon node={Laptop} className="lg:max-xl:block hidden opacity-50" />
+            <Icon node={Tablet} className="hidden opacity-50 md:max-lg:block" />
+            <Icon node={Laptop} className="hidden opacity-50 lg:max-xl:block" />
             <Icon
                 node={Monitor}
-                className="xl:max-2xl:block hidden opacity-50"
+                className="hidden opacity-50 xl:max-2xl:block"
             />
-            <Icon node={TvMinimal} className="2xl:block hidden opacity-50" />
-            <div className="max-sm:block hidden">vs</div>
-            <div className="sm:max-md:block hidden">sm</div>
-            <div className="md:max-lg:block hidden">md</div>
-            <div className="lg:max-xl:block hidden">lg</div>
-            <div className="xl:max-2xl:block hidden">xl</div>
-            <div className="2xl:block hidden">2xl</div>
+            <Icon node={TvMinimal} className="hidden opacity-50 2xl:block" />
+            <div className="hidden max-sm:block">vs</div>
+            <div className="hidden sm:max-md:block">sm</div>
+            <div className="hidden md:max-lg:block">md</div>
+            <div className="hidden lg:max-xl:block">lg</div>
+            <div className="hidden xl:max-2xl:block">xl</div>
+            <div className="hidden 2xl:block">2xl</div>
         </div>
     );
 }

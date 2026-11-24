@@ -1,9 +1,15 @@
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import babel from '@rolldown/plugin-babel';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, lazyPlugins } from 'vite-plus';
 
 // https://vite.dev/config/
 export default defineConfig({
+    plugins: lazyPlugins(() => [
+        react(),
+        babel({ presets: [reactCompilerPreset()] }),
+        tailwindcss(),
+    ]),
     fmt: {
         printWidth: 80,
         tabWidth: 4,
@@ -50,8 +56,4 @@ export default defineConfig({
             },
         ],
     },
-    plugins: lazyPlugins(() => [
-        react(),
-        babel({ presets: [reactCompilerPreset()] }),
-    ]),
 });
