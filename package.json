@@ -11,7 +11,7 @@
         "types:check": "tsc --noEmit",
         "preview": "vp preview",
         "prepare": "vp config",
-        "registry:build": "shadcn build"
+        "r:build": "shadcn build"
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.3.5",
