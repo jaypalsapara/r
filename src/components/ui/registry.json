@@ -6,9 +6,7 @@
             "type": "registry:ui",
             "title": "Icon",
             "description": "Wrapper to render a lucide icon passed via the node prop.",
-            "dependencies": [
-                "lucide-react"
-            ],
+            "dependencies": ["lucide-react"],
             "files": [
                 {
                     "path": "icon.tsx",

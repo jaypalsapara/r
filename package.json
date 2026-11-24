@@ -1,42 +1,44 @@
 {
-  "name": "registry",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vp dev",
-    "build": "tsc -b && vp build",
-    "lint": "vp lint",
-    "preview": "vp preview",
-    "prepare": "vp config",
-    "registry:build": "shadcn build"
-  },
-  "dependencies": {
-    "class-variance-authority": "^0.7.1",
-    "cn": "^0.5.2",
-    "lucide-react": "^1.78.0",
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@rolldown/plugin-babel": "^0.3.0",
-    "@types/babel__core": "^7.20.5",
-    "@types/node": "^24.19.2",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.2",
-    "babel-plugin-react-compiler": "^1.0.0",
-    "shadcn": "^4.23.0",
-    "typescript": "~7.0.2",
-    "vite": "catalog:",
-    "vite-plus": "catalog:"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "12.23.0",
-      "onFail": "download"
+    "name": "registry",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vp dev",
+        "build": "tsc -b && vp build",
+        "lint": "vp check --fix",
+        "lint:check": "vp check",
+        "types:check": "tsc --noEmit",
+        "preview": "vp preview",
+        "prepare": "vp config",
+        "registry:build": "shadcn build"
+    },
+    "dependencies": {
+        "class-variance-authority": "^0.7.1",
+        "cn": "^0.5.2",
+        "lucide-react": "^1.78.0",
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.29.7",
+        "@rolldown/plugin-babel": "^0.3.0",
+        "@types/babel__core": "^7.20.5",
+        "@types/node": "^24.19.2",
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "@vitejs/plugin-react": "^6.1.2",
+        "babel-plugin-react-compiler": "^1.0.0",
+        "shadcn": "^4.23.0",
+        "typescript": "~7.0.2",
+        "vite": "catalog:",
+        "vite-plus": "catalog:"
+    },
+    "devEngines": {
+        "packageManager": {
+            "name": "pnpm",
+            "version": "12.23.0",
+            "onFail": "download"
+        }
     }
-  }
 }

@@ -6,13 +6,8 @@
             "type": "registry:component",
             "title": "Screen Indicator",
             "description": "Floating badge showing the current Tailwind breakpoint.",
-            "dependencies": [
-                "class-variance-authority",
-                "lucide-react"
-            ],
-            "registryDependencies": [
-                "jaypalsapara/registry/icon"
-            ],
+            "dependencies": ["class-variance-authority", "lucide-react"],
+            "registryDependencies": ["jaypalsapara/registry/icon"],
             "files": [
                 {
                     "path": "screen-indicator.tsx",

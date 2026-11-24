@@ -4,9 +4,6 @@ import { defineConfig, lazyPlugins } from 'vite-plus';
 
 // https://vite.dev/config/
 export default defineConfig({
-    staged: {
-        '*': 'vp check --fix',
-    },
     fmt: {
         printWidth: 80,
         tabWidth: 4,
@@ -14,7 +11,7 @@ export default defineConfig({
         semi: true,
         singleAttributePerLine: false,
         htmlWhitespaceSensitivity: 'css',
-        ignorePatterns: ['.github/**'],
+        ignorePatterns: ['.github/**', 'public/**'],
         sortTailwindcss: {
             functions: ['clsx', 'cn', 'cva'],
             stylesheet: 'src/index.css',
@@ -24,12 +21,12 @@ export default defineConfig({
         plugins: ['react', 'typescript', 'oxc'],
         rules: {
             'react/rules-of-hooks': 'error',
-            'react/only-export-components': [
-                'warn',
-                {
-                    allowConstantExport: true,
-                },
-            ],
+            // 'react/only-export-components': [
+            //     'warn',
+            //     {
+            //         allowConstantExport: true,
+            //     },
+            // ],
             'vite-plus/prefer-vite-plus-imports': 'error',
             'no-unused-vars': [
                 'error',
